@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<link rel="stylesheet" type="text/css" href="formulario_contacto.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+
+<body>
+  <div class="container">
+     
+    <div class="contact-wrapper">
+		
+		<div class="contact-info">
+		<h1>Contacto Institucional</h1>
+      <p>Puedes completar el formulario para enviarnos tus consultas o comentarios. <br>Selecciona el departamento al que quieres realizar la consulta y recibirá tu mensaje</p>
+		</div>
+	
+	
+	
+	
+	 <div class="contact-form">
+      <h2>Datos de Contacto</h2>
+	  
+	  
+      <form action="enviar_formulario.php" method="post">
+	  
+       <p> <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required></p>
+
+        <p> <label for="email">Email institucional:</label>
+        <input type="email" id="email" name="email" required></p>
+
+        <p> <label for="destino">Destino:</label>
+        <select id="destino" name="destino" required>
+          <option value="">Selecciona un destino</option>
+		  <option value="administracion@colegioumbral.com">Administración</option>
+          <option value="utpmedia@colegioumbral.com">Coordinación Académica Media</option>
+          <option value="utpbasica@colegioumbral.com">Coordinación Académica Básica</option>
+          <option value="inspectoria@colegioumbral.com">Inspectoría</option>
+		  <option value="orientacion@colegioumbral.com">Orientación</option>
+		  <option value="enlaces@colegioumbral.com">Enlaces</option>
+		  <option value="felipe.sanchez@colegioumbral.com">FELIPE</option>
+		  <option value="gonzalo.flores@colegioumbral.com">GONZALO</option>
+		  <option value="claudio.perez@colegioumbral.com">CLAUDIO</option>
+		  <option value="jose.diaz@colegioumbral.com">JOSE</option>
+        </select></p>
+      
+       
+        <p><label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required></p>
+
+       <p class="block"> <label for="mensaje_breve">Mensaje breve:</label>
+          <textarea id="mensaje_breve" name="mensaje_breve" rows="4" required></textarea></p>
+
+
+
+      <div class="checkbox">
+ 
+         		 <input type="checkbox" id="condiciones" name="condiciones" required>
+		   </div>
+		   
+		 <div class="center-label">
+		   <label for="condiciones">Acepto las <a href="https://www.dianoia.cl">condiciones de uso</a></label>
+		  </div> 
+		
+		<p class="block"> 
+        <input type="submit" value="Enviar"></p>
+		
+	
+		</form>
+		
+	 <div id="mensaje"></div>
+    </div>
+	
+	
+       </div>
+	  
+    </div>
+</div>
+	
+	
+	
+	<!-- <script src="js/sweetMailAlert.js"></script> -->
+</body>
+</html>
